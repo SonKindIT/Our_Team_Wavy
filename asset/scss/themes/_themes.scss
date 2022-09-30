@@ -1,0 +1,137 @@
+//-------------------Variables-----------
+
+//---color----------
+
+$color-1 : #fff;
+$color-2 : #000;
+$color-3: #b61984;
+
+//-----font size-------
+
+$fs-1:13px;
+$fs-2:16px;
+$fs-3:20px;
+$fs-4:57px;
+$fs-5:11px;
+$fs-6:23px;
+$fs-7:15px;
+$fs-8:38px;
+
+//-----font weight-----
+
+$fw-vey-light:200;
+$fw-light:300;
+$fw-normal:500;
+$fw-semi-bold:700;
+$fw-bold:800;
+
+
+//----------background-color-----------
+
+$bc-1:#fff;
+$bc-2:#b61984;
+$bc-3:#d4d1d1;
+$bc-4:#dcd1f0 ;
+
+
+
+@mixin button-style($padding-x,$padding-y,$back-color,$border-rad) {
+    padding:$padding-y $padding-x;
+    border-radius: $border-rad;
+    border: solid 1px $back-color;
+    background-color: $back-color;
+}
+
+.sub-nav-style{
+    background-color: $bc-1;
+    visibility: hidden;
+    width: 220px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-10%);
+    margin: 0 5px;
+                p{
+                    cursor: pointer;
+                    font-size: $fs-1;
+                    font-weight: $fw-normal;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $bc-3;
+                        bottom: -10px;
+                        left: 0;
+                            }
+                            &:hover{
+                                color: $color-3;
+                            }  
+                }
+                 
+            }
+
+.sub-nav3-style{
+    background-color: $bc-1;
+    visibility: hidden;
+    width: 780px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    transform: translateX(-50%);
+    div{
+        margin: 0 5px;
+        p{
+            cursor: pointer;
+            font-size: $fs-1;
+            font-weight: $fw-normal;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $bc-3;
+                bottom: -10px;
+                left: 0;
+            }
+            &:hover{
+                color: $color-3;
+            }   
+        }
+        p:first-child{
+            font-size: $fs-1;
+            font-weight: $fw-normal;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $bc-2;
+                bottom: -10px;
+                left: 0;
+            }
+        }   
+    }
+}
+
+.input-style{
+    padding-right: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    &>i{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-90%);
+        color: $color-3;
+    }
+    &>input{
+        border-radius: 20px;
+        width: 100%;
+        padding:15px 15px 15px 30px;
+        border: solid 1px gray;
+    }
+}
